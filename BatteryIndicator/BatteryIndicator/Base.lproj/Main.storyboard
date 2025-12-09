@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BatteryIndicator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-ba-35f">
+                                <rect key="frame" x="30" y="118" width="333" height="309"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apw-Eh-L79">
+                                        <rect key="frame" x="46" y="23" width="240" height="158.66666666666666"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battery Indicators :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gec-rd-Eev">
+                                        <rect key="frame" x="46" y="254.66666666666671" width="240" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstItem="apw-Eh-L79" firstAttribute="leading" secondItem="a2m-ba-35f" secondAttribute="leading" constant="46" id="3Tm-UI-AVh"/>
+                                    <constraint firstAttribute="trailing" secondItem="gec-rd-Eev" secondAttribute="trailing" constant="47" id="AaL-hS-Z2N"/>
+                                    <constraint firstItem="gec-rd-Eev" firstAttribute="top" secondItem="apw-Eh-L79" secondAttribute="bottom" constant="73" id="EGc-7g-xZ6"/>
+                                    <constraint firstAttribute="bottom" secondItem="gec-rd-Eev" secondAttribute="bottom" constant="34" id="IBX-n5-3cM"/>
+                                    <constraint firstItem="gec-rd-Eev" firstAttribute="leading" secondItem="a2m-ba-35f" secondAttribute="leading" constant="46" id="QM0-Gf-1pe"/>
+                                    <constraint firstItem="apw-Eh-L79" firstAttribute="top" secondItem="a2m-ba-35f" secondAttribute="top" constant="23" id="Wpn-sx-CBb"/>
+                                    <constraint firstAttribute="trailing" secondItem="apw-Eh-L79" secondAttribute="trailing" constant="47" id="qZa-UN-gXI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcI-GF-obm">
+                                <rect key="frame" x="111" y="507.99999999999994" width="171" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dcI-GF-obm" secondAttribute="trailing" constant="111" id="E3z-EV-fsQ"/>
+                            <constraint firstItem="dcI-GF-obm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="QSk-km-2Z3"/>
+                            <constraint firstItem="dcI-GF-obm" firstAttribute="top" secondItem="a2m-ba-35f" secondAttribute="bottom" constant="81" id="j5e-e6-5uJ"/>
+                            <constraint firstItem="a2m-ba-35f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nwX-vM-B2A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a2m-ba-35f" secondAttribute="bottom" constant="357" id="p7n-ZC-Udd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a2m-ba-35f" secondAttribute="trailing" constant="30" id="sPC-Yl-X1Z"/>
+                            <constraint firstItem="a2m-ba-35f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xtD-Zj-4QV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="batteryImg" destination="apw-Eh-L79" id="Qc3-Qq-UoT"/>
+                        <outlet property="batteryLabel" destination="gec-rd-Eev" id="yJo-Sc-xKM"/>
+                        <outlet property="containerView" destination="a2m-ba-35f" id="TAG-E3-Seq"/>
+                        <outlet property="refreshButton" destination="dcI-GF-obm" id="hgd-j0-pX9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40.458015267175568" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
